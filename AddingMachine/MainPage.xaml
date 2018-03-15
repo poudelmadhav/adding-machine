@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="AddingMachine.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AddingMachine"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!-- Definining rows -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Name="numBox1"
+                 Grid.Column="0"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Stretch"
+                 TextAlignment="Center"
+                 FontSize="25"
+                 PlaceholderText="Enter num 1" InputScope="Number"/>
+            <TextBox Name="numBox2"
+                 Grid.Column="1"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Stretch"
+                 TextAlignment="Center"
+                 FontSize="25"
+                 PlaceholderText="Enter num 2" InputScope="Number"/>
+        </Grid>
+        <TextBlock Name="outputBlock"
+                   Grid.Row="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="26"
+                   FontWeight="Bold" />
+        <Button Name="addBtn"
+                Grid.Row="2"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Content="Add"
+                FontSize="26"
+                Click="addBtn_Click"/>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="ContactInfo"
+                          Label="info"
+                          Name="infoBtn"
+                          Click="infoBtn_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
